@@ -1,36 +1,81 @@
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 15px;
-  }
-  
-  .project-inner {
-    background-color: var(--light-navy);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-  }
-  
-  .project-inner:hover {
-    transform: translateY(-5px);
-  }
-  
-  .project-title {
-    color: var(--lightest-slate);
-  }
-  
-  .project-description {
-    color: var(--light-slate);
-  }
-  
-  .project-tech-list {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .project-tech-list li {
-    color: var(--green);
-  }
-  
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 15px;
+  position: relative;
+}
+
+.project {
+  position: relative;
+  cursor: default;
+  transition: var(--transition);
+}
+
+.project-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  height: 100%;
+  padding: 2rem 1.75rem;
+  border-radius: var(--border-radius);
+  background-color: var(--light-navy);
+  transition: var(--transition);
+}
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.folder {
+  color: var(--green);
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  margin-right: -10px;
+  color: var(--light-slate);
+}
+
+.project-links a {
+  padding: 5px 7px;
+}
+
+.project-title {
+  margin: 0 0 10px;
+  color: var(--lightest-slate);
+  font-size: var(--fz-xxl);
+}
+
+.project-description {
+  color: var(--light-slate);
+  font-size: 17px;
+}
+
+.project-tech-list {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 20px 0 0 0;
+  list-style: none;
+}
+
+.project-tech-list li {
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: 1.75;
+}
+
+.project-tech-list li:not(:last-of-type) {
+  margin-right: 15px;
+}

@@ -1,36 +1,80 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: rgba(10, 25, 47, 0.85);
-    backdrop-filter: blur(10px);
-  }
-  
-  nav ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    align-items: center; /* Ensure the logo and links align vertically */
-  }
-  
-  nav ul li.logo {
-    margin-right: auto; /* Push the logo to the left */
-  }
-  
-  .logo-img {
-    height: 50px; /* Adjust the size of the logo */
-    width: auto;
-  }
-  
-  nav ul li a {
-    padding: 10px;
-    color: var(--lightest-slate);
-    font-size: var(--fz-md);
-    transition: var(--transition);
-  }
-  
-  nav ul li a:hover {
-    color: var(--green);
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  padding: 0px 50px;
+  width: 100%;
+  height: var(--nav-height);
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 5px;
+}
+
+.nav-links a {
+  padding: 10px;
+  color: var(--lightest-slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  text-decoration: none;
+}
+
+.nav-links a span {
+  color: var(--green);
+  margin-right: 5px;
+}
+
+.resume-button {
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  font-size: var(--fz-xs);
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.resume-button:hover,
+.resume-button:focus,
+.resume-button:active {
+  background-color: var(--green-tint);
+  outline: none;
+}

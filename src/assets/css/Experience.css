@@ -1,31 +1,104 @@
-.experience-container {
-    display: flex;
-  }
-  
-  .clickable-column {
-    display: flex;
-    flex-direction: column;
-    margin-right: 30px;
-  }
-  
-  .companyName {
-    padding: 10px;
-    cursor: pointer;
-    color: var(--slate);
-    border-left: 2px solid var(--lightest-navy);
-    transition: var(--transition);
-  }
-  
-  .companyName.active {
-    color: var(--green);
-    border-left: 2px solid var(--green);
-  }
-  
-  .description-column {
-    flex: 1;
-  }
-  
-  .company-column img {
-    border-radius: var(--border-radius);
-  }
-  
+#experience {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.experience-content {
+  display: flex;
+  align-items: stretch;
+}
+
+.company-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  margin-right: 50px;
+}
+
+.company-tab {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 14px;
+  text-align: left;
+  background: none;
+  border: none;
+  border-left: 2px solid var(--lightest-navy);
+  color: var(--slate);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.company-tab img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  object-fit: contain;
+}
+
+.company-tab span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.company-tab.active {
+  color: var(--green);
+  border-left-color: var(--green);
+  background-color: var(--light-navy);
+}
+
+.job-info {
+  flex-grow: 1;
+}
+
+.job-info h3 {
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.job-role {
+  color: var(--lightest-slate);
+}
+
+.job-company {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.job-company a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.job-duration {
+  margin-bottom: 25px;
+  color: var(--light-slate);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.job-description {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.job-description li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.job-description li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+}
