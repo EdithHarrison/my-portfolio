@@ -1,17 +1,26 @@
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--navy);
-    text-align: center;
-  }
-  
-  .footer-content a {
-    color: var(--light-slate);
-  }
-  
-  .footer-content a:hover {
-    color: var(--green);
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  min-height: 70px;
+  padding: 15px;
+  text-align: center;
+}
+
+.footer-content {
+  color: var(--light-slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: 1;
+}
+
+.footer-content a {
+  padding: 10px;
+}
+
+.footer-content a:hover,
+.footer-content a:focus {
+  text-decoration: none;
+}

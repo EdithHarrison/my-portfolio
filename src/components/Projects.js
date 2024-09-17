@@ -4,18 +4,18 @@ import '../assets/css/Projects.css'
 const Projects = () => {
   const projects = [
     {
-      title: 'Project 1',
-      description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.',
-      tech: ['React', 'Express', 'Spotify API'],
-      github: 'https://github.com/yourusername/project1',
-      external: 'https://project1.com'
+      title: 'Saver Sub',
+      description: 'A subscription management app designed to help you save money by keeping track of all your online subscriptions in one place.',
+      tech: ['Node.js', 'Express', 'EJS'],
+      github: 'https://github.com/EdithHarrison/SaverSub',
+      external: 'https://saversub-1.onrender.com/'
     },
-    // Add more project objects here
+    // Add more projects here
   ];
 
   return (
     <section id="projects" className="projects-section">
-      <h2 className="numbered-heading">Some Things I've Built</h2>
+      <h2 className="numbered-heading" data-number="03.">Some Things I've Built</h2>
       <ul className="projects-grid">
         {projects.map((project, i) => (
           <li className="project" key={i}>
@@ -30,7 +30,7 @@ const Projects = () => {
                     <a href={project.external} aria-label="External Link" className="external"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
                   </div>
                 </div>
-                <h3 className="project-title">{project.title}</h3>
+                <h3 className="project-title"><a href={project.external}>{project.title}</a></h3>
                 <div className="project-description">
                   <p>{project.description}</p>
                 </div>

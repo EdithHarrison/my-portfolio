@@ -13,11 +13,11 @@ const Experience = () => {
     {
       company: "Code the Dream",
       role: "Practicum Backend Developer",
-      date: "Feb 2024 – Jun 2024",
+      date: "Jul 2024 – Sept 2024",
       description: [
-        "Backend Development: Built and integrated backend features using Node.js and Firebase, ensuring real-time data management and secure user authentication.",
-        "Version Control & Collaboration: Utilized GitHub for version control and team collaboration, conducting code reviews and ensuring smooth integration.",
-        "MVP Delivery: Successfully delivered a Minimum Viable Product (MVP), focusing on user-friendly functionality."
+        "Built and integrated backend features using Node.js and Firebase, ensuring real-time data management and secure user authentication.",
+        "Utilized GitHub for version control and team collaboration, conducting code reviews and ensuring smooth integration.",
+        "Successfully delivered a Minimum Viable Product (MVP), focusing on user-friendly functionality."
       ],
       image: CodeTheDreamImage,
       url: "https://www.codethedream.org"
@@ -34,7 +34,7 @@ const Experience = () => {
       url: "https://www.appen.com"
     },
     {
-      company: "J Sargeant Reynolds Community College",
+      company: "Reynolds Community College",
       role: "Social Media Specialist",
       date: "Sep 2017 – Sep 2018",
       description: [
@@ -61,45 +61,38 @@ const Experience = () => {
     setActiveIndex(0);
   }, []);
 
-  const handleClick = (index) => {
-    setActiveIndex(index);
-  };
-
   return (
     <section id="experience">
-      <h2 className="numbered-heading">Where I've Worked</h2>
-      <div className="experience-container">
-        {/* Company names clickable list */}
-        <div className="clickable-column">
-          {experiences.map((exp, index) => (
-            <div
+      <h2 className="numbered-heading" data-number="02.">Where I've Worked</h2>
+      <div className="experience-content">
+        <div className="company-list">
+          {experiences.map((experience, index) => (
+            <button
               key={index}
-              className={`companyName clickable ${index === activeIndex ? 'active' : ''}`}
-              onClick={() => handleClick(index)}
+              className={`company-tab ${index === activeIndex ? 'active' : ''}`}
+              onClick={() => setActiveIndex(index)}
             >
-              <p>{exp.company}</p>
-            </div>
+              <img src={experience.image} alt={experience.company} />
+              <span>{experience.company}</span>
+            </button>
           ))}
         </div>
-
-        {/* Experience details */}
-        <div className="description-column">
-          <div className="description">
-            <h3>{experiences[activeIndex].role}</h3>
-            <p className="company-date">{experiences[activeIndex].date}</p>
-            <ul>
-              {experiences[activeIndex].description.map((desc, index) => (
-                <li key={index}>{desc}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Clickable company image */}
-        <div className="company-column">
-          <a href={experiences[activeIndex].url} target="_blank" rel="noopener noreferrer">
-            <img src={experiences[activeIndex].image} alt={experiences[activeIndex].company} />
-          </a>
+        <div className="job-info">
+          <h3>
+            <span className="job-role">{experiences[activeIndex].role}</span>
+            <span className="job-company">
+              &nbsp;@&nbsp;
+              <a href={experiences[activeIndex].url} target="_blank" rel="noopener noreferrer">
+                {experiences[activeIndex].company}
+              </a>
+            </span>
+          </h3>
+          <p className="job-duration">{experiences[activeIndex].date}</p>
+          <ul className="job-description">
+            {experiences[activeIndex].description.map((desc, i) => (
+              <li key={i}>{desc}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

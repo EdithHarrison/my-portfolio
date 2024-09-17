@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Intro from './components/Intro';
 import About from './components/About';
 import Experience from './components/Experience';
-import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Connect from './components/Connect';
 import Footer from './components/Footer';
@@ -19,7 +18,6 @@ function App() {
         <Intro />
         <About />
         <Experience />
-        <Skills />
         <Projects />
         <Connect />
       </main>
