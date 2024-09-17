@@ -6,10 +6,9 @@ const Experience = () => {
   const experiences = [
     {
       company: "Code the Dream",
-      role: "Practicum Project Organizer / Backend Developer",
+      role: "Practicum Backend Developer",
       date: "Feb 2024 – Jun 2024",
       description: [
-        "Team Leadership: Led team 3 in developing LearningHub, a full-stack web application. Managed project coordination, ticketing, and meetings using Trello for project management.",
         "Backend Development: Built and integrated backend features using Node.js and Firebase, ensuring real-time data management and secure user authentication.",
         "Version Control & Collaboration: Utilized GitHub for version control and team collaboration, conducting code reviews and ensuring smooth integration.",
         "MVP Delivery: Successfully delivered a Minimum Viable Product (MVP), focusing on user-friendly functionality."

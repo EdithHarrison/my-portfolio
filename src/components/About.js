@@ -7,10 +7,9 @@ const About = () => {
       <div className="inner">
         <div className="about-text">
           <p>
-            Hello! My name is Edith and I enjoy creating things that live on the internet. 
-            My interest in web development started back in 2012 when I decided to try editing 
-            custom Tumblr themes — turns out hacking together a custom reblog button taught me 
-            a lot about HTML & CSS!
+            Hi, I'm Edith, a passionate Full Stack Developer who thrives on turning ideas into interactive, 
+            functional, and visually appealing digital experiences. My passion for web development started during my time at a community college, 
+            where I took my first web design class. What started as a curiosity quickly turned into a fascination with programming.
           </p>
           <p>
             Here are a few technologies I've been working with recently:
@@ -22,6 +21,7 @@ const About = () => {
             <li>TypeScript</li>
             <li>Express</li>
             <li>Firebase</li>
+            <li>MongoDB</li>
           </ul>
         </div>
         <div className="about-pic">

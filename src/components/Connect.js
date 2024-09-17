@@ -6,8 +6,9 @@ const Connect = () => {
       <h2 className="numbered-heading overline">What's Next?</h2>
       <h2 className="title">Get In Touch</h2>
       <p>
-        Although I'm not currently looking for any new opportunities, my inbox is always open. 
-        Whether you have a question or just want to say hi, I'll try my best to get back to you!
+      While I’m actively seeking new web development opportunities, my inbox is always open for collaboration or just a friendly hello. 
+      Whether you have a question, a project idea, or want to connect, I’ll do my best to respond. 
+      I’m excited to work with like-minded professionals and teams to create impactful digital experiences.
       </p>
       <a className="email-link" href="mailto:your.email@example.com">Say Hello</a>
     </section>
