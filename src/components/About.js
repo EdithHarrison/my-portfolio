@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/css/About.css';
 
 const About = () => {
   return (
@@ -26,7 +27,7 @@ const About = () => {
         </div>
         <div className="about-pic">
           <div className="wrapper">
-            <img src="path/to/your/image.jpg" alt="Edith Harrison" />
+            <img src={require('../assets/images/profilepic.png')} alt="Edith Harrison" />
           </div>
         </div>
       </div>

@@ -1,0 +1,36 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+  }
+  
+  .project-inner {
+    background-color: var(--light-navy);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+  
+  .project-inner:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-title {
+    color: var(--lightest-slate);
+  }
+  
+  .project-description {
+    color: var(--light-slate);
+  }
+  
+  .project-tech-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .project-tech-list li {
+    color: var(--green);
+  }
+  

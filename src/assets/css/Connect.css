@@ -1,0 +1,19 @@
+.connect-section {
+    text-align: center;
+  }
+  
+  .email-link {
+    color: var(--green);
+    border: 1px solid var(--green);
+    padding: 1.25rem 1.75rem;
+    border-radius: var(--border-radius);
+    font-family: var(--font-mono);
+    margin-top: 50px;
+    display: inline-block;
+    transition: var(--transition);
+  }
+  
+  .email-link:hover {
+    background-color: var(--green-tint);
+  }
+  

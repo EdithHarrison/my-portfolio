@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--navy);
+    text-align: center;
+  }
+  
+  .footer-content a {
+    color: var(--light-slate);
+  }
+  
+  .footer-content a:hover {
+    color: var(--green);
+  }
+  

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/css/Connect.css'
 
 const Connect = () => {
   return (

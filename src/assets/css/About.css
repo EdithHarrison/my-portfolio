@@ -1,0 +1,25 @@
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .about-text p {
+    color: var(--light-slate);
+    margin-bottom: 20px;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+  }
+  
+  .skills-list li {
+    color: var(--green);
+    background-color: var(--light-navy);
+    padding: 10px;
+    border-radius: var(--border-radius);
+  }
+  

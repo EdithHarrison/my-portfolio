@@ -1,0 +1,22 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .social-links li {
+    margin-bottom: 20px;
+  }
+  
+  .social-links a {
+    color: var(--lightest-slate);
+    transition: var(--transition);
+  }
+  
+  .social-links a:hover {
+    color: var(--green);
+  }
+  
