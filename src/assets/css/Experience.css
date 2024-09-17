@@ -1,0 +1,31 @@
+.experience-container {
+    display: flex;
+  }
+  
+  .clickable-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+  }
+  
+  .companyName {
+    padding: 10px;
+    cursor: pointer;
+    color: var(--slate);
+    border-left: 2px solid var(--lightest-navy);
+    transition: var(--transition);
+  }
+  
+  .companyName.active {
+    color: var(--green);
+    border-left: 2px solid var(--green);
+  }
+  
+  .description-column {
+    flex: 1;
+  }
+  
+  .company-column img {
+    border-radius: var(--border-radius);
+  }
+  

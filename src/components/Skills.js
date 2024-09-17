@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/css/Skills.css'
 
 const Skills = () => {
   const skills = [

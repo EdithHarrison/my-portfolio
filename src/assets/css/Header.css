@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center; /* Ensure the logo and links align vertically */
+  }
+  
+  nav ul li.logo {
+    margin-right: auto; /* Push the logo to the left */
+  }
+  
+  .logo-img {
+    height: 50px; /* Adjust the size of the logo */
+    width: auto;
+  }
+  
+  nav ul li a {
+    padding: 10px;
+    color: var(--lightest-slate);
+    font-size: var(--fz-md);
+    transition: var(--transition);
+  }
+  
+  nav ul li a:hover {
+    color: var(--green);
+  }
+  
