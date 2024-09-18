@@ -19,10 +19,25 @@ const Projects = () => {
         require('../assets/images/saversub2.png')
       ] 
     },
-    // Add more projects here
+    {
+      title: 'Personal Project Portfolio',
+      description: 'This portfolio is inspired by the design by Brittany Chiang her website is built in gatsby. I wanted to challenge myself to build my own version using React.js.',
+      features: [
+        'Project Showcase: Features an interactive gallery of my projects and skills.',
+        'Smooth Animations: Includes subtle animations and transitions for a polished feel.'
+      ],
+      tech: ['React.js', 'JavaScript', 'HTML', 'CSS'],
+      github: 'https://github.com/EdithHarrison/my-portfolio', 
+      external: 'https://edithfullstack.onrender.com/', 
+      images: [
+        require('../assets/images/portfolio.png'),
+        require('../assets/images/portfolio1.png'),
+        require('../assets/images/portfolio2.png')
+      ]
+    }
   ];
 
-  const ProjectCard = ({ project }) => {
+  const ProjectCard = ({ project, index }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const nextImage = () => {
@@ -38,12 +53,17 @@ const Projects = () => {
     };
 
     return (
-      <li className="project">
+      <li className={`project ${index % 2 !== 0 ? 'reverse' : ''}`}>
         <div className="project-inner">
           <div className="project-content">
             <h3 className="project-title">{project.title}</h3>
             <div className="project-description">
-              <p>{project.description}</p>
+              <p>
+                {project.description}
+                {project.brittanySource && (
+                  <> Inspired by <a href={project.brittanySource} target="_blank" rel="noopener noreferrer">Brittany's source code</a>.</>
+                )}
+              </p>
               {project.features && (
                 <>
                   <h4>Features:</h4>
@@ -88,7 +108,7 @@ const Projects = () => {
       <h2 className="numbered-heading" data-number="03.">Some Things I've Built</h2>
       <ul className="projects-grid">
         {projects.map((project, i) => (
-          <ProjectCard key={i} project={project} />
+          <ProjectCard key={i} project={project} index={i} />
         ))}
       </ul>
     </section>
