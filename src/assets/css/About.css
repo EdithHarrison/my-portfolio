@@ -47,7 +47,7 @@
   content: '▹';
   position: absolute;
   left: 0;
-  color: var(--green);
+  color: var(--accent);
   font-size: var(--fz-sm);
   line-height: 12px;
 }
@@ -62,5 +62,5 @@
   width: 100%;
   height: auto;
   border-radius: var(--border-radius);
-  border: 2px solid var(--green);
+  border: 2px solid var(--accent);
 }

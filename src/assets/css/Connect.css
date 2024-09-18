@@ -6,7 +6,7 @@
 }
 
 .connect-overline {
-  color: var(--green);
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: var(--fz-md);
   font-weight: 400;
@@ -16,20 +16,20 @@
 .connect-title {
   font-size: clamp(40px, 5vw, 60px);
   margin: 0 0 20px 0;
-  color: var(--lightest-slate);
+  color: var(--text-lightest);
 }
 
 .connect-description {
-  color: var(--slate);
+  color: var(--text-medium);
   margin-bottom: 50px;
   font-size: var(--fz-lg);
   line-height: 1.5;
 }
 
 .connect-button {
-  color: var(--green);
+  color: var(--accent);
   background-color: transparent;
-  border: 1px solid var(--green);
+  border: 1px solid var(--accent);
   border-radius: var(--border-radius);
   padding: 1.25rem 1.75rem;
   font-size: var(--fz-sm);
@@ -44,7 +44,7 @@
 .connect-button:hover,
 .connect-button:focus,
 .connect-button:active {
-  background-color: var(--green-tint);
+  background-color: var(--accent-tint);
   outline: none;
 }
 
