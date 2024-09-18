@@ -12,3 +12,5 @@ This is my personal portfolio built using React.js. It showcases my skills, proj
 - React.js
 - HTML5 & CSS3
 - JavaScript (ES6+)
+
+Deployed here: https://edithfullstack.onrender.com/
