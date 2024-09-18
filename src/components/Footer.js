@@ -11,7 +11,7 @@ const Footer = () => {
           </svg>
         </a>
         <div>
-          Design inspired by <a href="https://brittanychiang.com" target="_blank" rel="noopener noreferrer">Brittany Chiang</a> &amp; Built by Edith Harrison
+          Design inspired by <a href="https://v4.brittanychiang.com/" target="_blank" rel="noopener noreferrer">Brittany Chiang</a> &amp; Built by Edith Harrison
         </div>
         <div className="built-with">
           Built with React.js

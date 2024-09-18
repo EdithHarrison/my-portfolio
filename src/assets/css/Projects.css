@@ -19,9 +19,18 @@
   transition: var(--transition);
 }
 
+.project.reverse .project-inner {
+  flex-direction: row-reverse;
+}
+
 .project-content {
   width: 50%;
   padding-right: 30px;
+}
+
+.project.reverse .project-content {
+  padding-right: 0;
+  padding-left: 30px;
 }
 
 .image-slider {
@@ -84,6 +93,16 @@
   margin-bottom: 20px;
 }
 
+.project-description a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-description a:hover {
+  color: var(--text-lightest);
+}
+
 .project-description h4 {
   margin: 20px 0 10px;
   color: var(--text-lightest);
@@ -137,7 +156,8 @@
 }
 
 @media (max-width: 768px) {
-  .project-inner {
+  .project-inner,
+  .project.reverse .project-inner {
     flex-direction: column;
   }
 
@@ -146,8 +166,10 @@
     width: 100%;
   }
 
-  .project-content {
+  .project-content,
+  .project.reverse .project-content {
     padding-right: 0;
+    padding-left: 0;
     margin-bottom: 30px;
   }
 }
