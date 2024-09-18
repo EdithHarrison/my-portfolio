@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 0;
   z-index: 10;
-  color: var(--light-slate);
+  color: var(--text-light);
 }
 
 .sidebar.left {
@@ -29,7 +29,7 @@
   width: 1px;
   height: 90px;
   margin: 0 auto;
-  background-color: var(--light-slate);
+  background-color: var(--text-light);
 }
 
 .social-links li {
@@ -48,7 +48,7 @@
 .social-links a:hover,
 .social-links a:focus {
   transform: translateY(-3px);
-  color: var(--green);
+  color: var(--accent);
 }
 
 .social-links svg {
@@ -69,7 +69,7 @@
   width: 1px;
   height: 90px;
   margin: 0 auto;
-  background-color: var(--light-slate);
+  background-color: var(--text-light);
 }
 
 .email-link {
@@ -80,7 +80,7 @@
   line-height: var(--fz-lg);
   letter-spacing: 0.1em;
   writing-mode: vertical-rl;
-  color: var(--light-slate);
+  color: var(--text-light);
   transition: var(--transition);
   border: none;
   background: none;
@@ -90,5 +90,5 @@
 .email-link:hover,
 .email-link:focus {
   transform: translateY(-3px);
-  color: var(--green);
+  color: var(--accent);
 }

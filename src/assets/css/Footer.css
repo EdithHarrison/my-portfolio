@@ -10,7 +10,7 @@
 }
 
 .footer-content {
-  color: var(--light-slate);
+  color: var(--text-light);
   font-family: var(--font-mono);
   font-size: var(--fz-xxs);
   line-height: 1;

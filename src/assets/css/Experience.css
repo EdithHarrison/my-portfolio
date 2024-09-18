@@ -24,8 +24,8 @@
   text-align: left;
   background: none;
   border: none;
-  border-left: 2px solid var(--lightest-navy);
-  color: var(--slate);
+  border-left: 2px solid var(--bg-medium-purple);
+  color: var(--text-medium);
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
@@ -45,9 +45,9 @@
 }
 
 .company-tab.active {
-  color: var(--green);
-  border-left-color: var(--green);
-  background-color: var(--light-navy);
+  color: var(--accent);
+  border-left-color: var(--accent);
+  background-color: var(--bg-purple);
 }
 
 .job-info {
@@ -62,7 +62,7 @@
 }
 
 .job-role {
-  color: var(--lightest-slate);
+  color: var(--text-lightest);
 }
 
 .job-company {
@@ -72,13 +72,13 @@
 }
 
 .job-company a {
-  color: var(--green);
+  color: var(--accent);
   text-decoration: none;
 }
 
 .job-duration {
   margin-bottom: 25px;
-  color: var(--light-slate);
+  color: var(--text-light);
   font-family: var(--font-mono);
   font-size: 13px;
 }
@@ -100,5 +100,6 @@
   content: '▹';
   position: absolute;
   left: 0;
-  color: var(--green);
+  color: var(--accent);
 }
+

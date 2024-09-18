@@ -8,7 +8,7 @@
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
+  background-color: rgba(34, 1, 77, 0.85);
   backdrop-filter: blur(10px);
   transition: var(--transition);
 }
@@ -47,21 +47,21 @@
 
 .nav-links a {
   padding: 10px;
-  color: var(--lightest-slate);
+  color: var(--text-lightest);
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   text-decoration: none;
 }
 
 .nav-links a span {
-  color: var(--green);
+  color: var(--accent);
   margin-right: 5px;
 }
 
 .resume-button {
-  color: var(--green);
+  color: var(--accent);
   background-color: transparent;
-  border: 1px solid var(--green);
+  border: 1px solid var(--accent);
   border-radius: var(--border-radius);
   padding: 0.75rem 1rem;
   font-size: var(--fz-xs);
@@ -75,6 +75,6 @@
 .resume-button:hover,
 .resume-button:focus,
 .resume-button:active {
-  background-color: var(--green-tint);
+  background-color: var(--accent-tint);
   outline: none;
 }

@@ -1,16 +1,16 @@
 :root {
-  --dark-navy: #020c1b;
-  --navy: #0a192f;
-  --light-navy: #112240;
-  --lightest-navy: #233554;
-  --navy-shadow: rgba(2, 12, 27, 0.7);
-  --dark-slate: #495670;
-  --slate: #8892b0;
-  --light-slate: #a8b2d1;
-  --lightest-slate: #ccd6f6;
-  --white: #e6f1ff;
-  --green: #64ffda;
-  --green-tint: rgba(100, 255, 218, 0.1);
+  --bg-deep-purple: #22014d;
+  --bg-purple: #2d0266;
+  --bg-medium-purple: #3a0280;
+  --bg-light-purple: #4f02b3;
+  --shadow-purple: rgba(34, 1, 77, 0.7);
+  --text-dark: #b8a5d9;
+  --text-medium: #d1c4e9;
+  --text-light: #e8e0f7;
+  --text-lightest: #f3eeff;
+  --white: #ffffff;
+  --accent: #cda2ff;
+  --accent-tint: rgba(205, 162, 255, 0.1);
 
   --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
@@ -52,8 +52,16 @@ body {
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--navy);
-  color: var(--slate);
+  background-color: var(--bg-deep-purple);
+  
+  /* Background images for full-screen coverage */
+  background-image: url('../images/light.png');
+  background-size: cover; /* Ensures images cover the full screen */
+  background-position: center; /* Centers the images */
+  background-repeat: no-repeat; /* Prevents repeating of images */
+  background-attachment: fixed; /* Keeps the background static as the user scrolls */
+
+  color: var(--text-medium);
   font-family: var(--font-sans);
   font-size: var(--fz-xl);
   line-height: 1.3;
@@ -72,7 +80,7 @@ section {
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px 0;
   font-weight: 600;
-  color: var(--lightest-slate);
+  color: var(--text-lightest);
   line-height: 1.1;
 }
 
@@ -92,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
   counter-increment: section;
   content: "0" counter(section) ".";
   margin-right: 10px;
-  color: var(--green);
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
   font-weight: 400;
@@ -106,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 300px;
   height: 1px;
   margin-left: 20px;
-  background-color: var(--lightest-navy);
+  background-color: var(--bg-light-purple);
 }
 
 a {
@@ -120,13 +128,13 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--green);
+  color: var(--accent);
 }
 
 .button {
-  color: var(--green);
+  color: var(--accent);
   background-color: transparent;
-  border: 1px solid var(--green);
+  border: 1px solid var(--accent);
   border-radius: var(--border-radius);
   padding: 0.75rem 1rem;
   font-size: var(--fz-xs);
@@ -140,14 +148,13 @@ a:focus {
 .button:hover,
 .button:focus,
 .button:active {
-  background-color: var(--green-tint);
+  background-color: var(--accent-tint);
   outline: none;
 }
 
-/* Additional styles that shouldn't interfere */
-
 p {
   margin: 0 0 15px 0;
+  color: var(--text-light);
 }
 
 img {
@@ -169,7 +176,7 @@ img {
 
 .numbered-heading::before {
   margin-right: 10px;
-  color: var(--green);
+  color: var(--accent);
   font-family: var(--font-mono);
   font-weight: 400;
   font-size: var(--fz-md);
@@ -179,6 +186,7 @@ img {
   content: attr(data-number);
 }
 
+/* Responsive Design */
 @media (max-width: 1080px) {
   .main-content {
     padding: 0 100px;
@@ -194,5 +202,11 @@ img {
 @media (max-width: 480px) {
   .main-content {
     padding: 0 25px;
+  }
+
+  /* Adjust background image sizes for mobile */
+  body {
+    background-size: 50%, 50%, 30%;
+    background-position: top left, top right, bottom;
   }
 }
