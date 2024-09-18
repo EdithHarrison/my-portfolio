@@ -13,14 +13,42 @@
   color: var(--text-light);
   font-family: var(--font-mono);
   font-size: var(--fz-xxs);
-  line-height: 1;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content > div {
+  margin: 5px 0;
+}
+
+.github-link {
+  display: inline-block;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.github-link:hover {
+  transform: translateY(-3px);
+}
+
+.github-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.built-with {
+  font-style: italic;
 }
 
 .footer-content a {
-  padding: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-content a:hover,
 .footer-content a:focus {
-  text-decoration: none;
+  color: var(--text-lightest);
 }
