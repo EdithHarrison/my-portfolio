@@ -35,7 +35,7 @@ const Header = () => {
         <li><a href="#experience" onClick={closeMenu}><span>02.</span>Experience</a></li>
         <li><a href="#projects" onClick={closeMenu}><span>03.</span>Projects</a></li>
         <li><a href="#connect" onClick={closeMenu}><span>04.</span>Connect</a></li>
-        <li><a href="/resume" className="resume-button" onClick={closeMenu}>Resume</a></li>
+        <li><a href="/EdithHarrison_Resume.pdf" className="resume-button" onClick={closeMenu} target="_blank" rel="noopener noreferrer">Resume</a></li>
         </ul>
       </nav>
     </header>
