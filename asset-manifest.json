@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e0476af8.css",
+    "main.js": "/static/js/main.b614b876.js",
+    "static/media/TravelApp.png": "/static/media/TravelApp.a287b0562a0689c19ba7.png",
+    "static/media/portfolio1.png": "/static/media/portfolio1.aa0f2ef893007ac034bd.png",
+    "static/media/portfolio2.png": "/static/media/portfolio2.0905316f897ee9fe6b30.png",
+    "static/media/portfolio.png": "/static/media/portfolio.bede9a4248216b2f1b80.png",
+    "static/media/TravelApp1.png": "/static/media/TravelApp1.29cc2e27d1bee2315afe.png",
+    "static/media/TravelApp2.png": "/static/media/TravelApp2.47515855384cc85566df.png",
+    "static/media/DesktopPet2.png": "/static/media/DesktopPet2.b4920b351cedc1edfca1.png",
+    "static/media/learninghub2.png": "/static/media/learninghub2.ad45e8cb4f5dc956889e.png",
+    "static/media/learninghub.png": "/static/media/learninghub.b1b94bf03e058cc49810.png",
+    "static/media/learninghub1.png": "/static/media/learninghub1.3dd121c0fb134e08dfe7.png",
+    "static/media/saversub.png": "/static/media/saversub.269120976c0ec2145489.png",
+    "static/media/DesktopPet.png": "/static/media/DesktopPet.16db91b705282898775b.png",
+    "static/media/DesktopPet1.png": "/static/media/DesktopPet1.43b1a6ae41b3734ee112.png",
+    "static/media/profilepic.png": "/static/media/profilepic.6dbeb84198292b5f33aa.png",
+    "static/media/saversub2.png": "/static/media/saversub2.e40d28be6535f8969018.png",
+    "static/media/saversub1.png": "/static/media/saversub1.edcb3f5b5c451e27006c.png",
+    "static/media/light.png": "/static/media/light.b20f9e87f01542917ae6.png",
+    "static/media/Reynolds.png": "/static/media/Reynolds.d4b357205bf19c40c4b1.png",
+    "static/media/CodeTheDream.png": "/static/media/CodeTheDream.a5500c43fd07ac64d6b7.png",
+    "static/media/Appen.png": "/static/media/Appen.20950e83db216f97f14d.png",
+    "static/media/edithlogo.png": "/static/media/edithlogo.0f61705eea9c3bf62f22.png",
+    "static/media/HarteHanks.png": "/static/media/HarteHanks.545ba5d53067ad33d847.png",
+    "static/media/SAS.png": "/static/media/SAS.ddadba38c2d190133e69.png",
+    "index.html": "/index.html",
+    "main.e0476af8.css.map": "/static/css/main.e0476af8.css.map",
+    "main.b614b876.js.map": "/static/js/main.b614b876.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0476af8.css",
+    "static/js/main.b614b876.js"
+  ]
+}
