@@ -103,3 +103,91 @@
   color: var(--accent);
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  #experience {
+    padding: 80px 0;
+  }
+
+  .experience-content {
+    flex-direction: column;
+  }
+
+  .company-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    min-width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .company-list::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .company-list::-webkit-scrollbar-track {
+    background: var(--bg-medium-purple);
+    border-radius: 10px;
+  }
+
+  .company-list::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+  }
+
+  .company-tab {
+    min-width: 200px;
+    flex-shrink: 0;
+    border-left: 2px solid var(--bg-medium-purple);
+    border-bottom: 2px solid var(--bg-medium-purple);
+    border-top: none;
+    padding: 15px;
+    white-space: nowrap;
+  }
+
+  .company-tab.active {
+    border-left-color: var(--accent);
+    border-bottom-color: var(--accent);
+    background-color: var(--bg-purple);
+  }
+
+  .company-tab img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  .job-info h3 {
+    font-size: 20px;
+  }
+
+  .job-description li {
+    font-size: 16px;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  #experience {
+    padding: 60px 0;
+  }
+
+  .company-tab {
+    min-width: 180px;
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .job-info h3 {
+    font-size: 18px;
+  }
+
+  .job-description li {
+    font-size: 15px;
+  }
+}
+

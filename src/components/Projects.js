@@ -21,7 +21,7 @@ const Projects = () => {
     },
     {
       title: 'Personal Project Portfolio',
-      description: 'This portfolio is inspired by the design by Brittany Chiang her website is built in gatsby. I wanted to challenge myself to build my own version using React.js.',
+      description: 'A personal portfolio website showcasing my projects, skills, and experience. Built with React.js to demonstrate my frontend development capabilities.',
       features: [
         'Project Showcase: Features an interactive gallery of my projects and skills.',
         'Smooth Animations: Includes subtle animations and transitions for a polished feel.'
@@ -60,9 +60,6 @@ const Projects = () => {
             <div className="project-description">
               <p>
                 {project.description}
-                {project.brittanySource && (
-                  <> Inspired by <a href={project.brittanySource} target="_blank" rel="noopener noreferrer">Brittany's source code</a>.</>
-                )}
               </p>
               {project.features && (
                 <>

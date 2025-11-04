@@ -19,9 +19,13 @@ const About = () => {
               <li>React</li>
               <li>Node.js</li>
               <li>TypeScript</li>
+              <li>Python</li>
               <li>Express</li>
               <li>Firebase</li>
               <li>MongoDB</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Playwright</li>
               <li>Figma</li>
             </ul>
           </div>
