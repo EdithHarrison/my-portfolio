@@ -92,3 +92,20 @@
   transform: translateY(-3px);
   color: var(--accent);
 }
+
+/* Mobile Styles */
+@media (max-width: 1080px) {
+  .sidebar.left {
+    left: 20px;
+  }
+
+  .sidebar.right {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

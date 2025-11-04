@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/css/Experience.css';
 
+import SASImage from '../assets/images/SAS.png';
 import AppenImage from '../assets/images/Appen.png';
 import CodeTheDreamImage from '../assets/images/CodeTheDream.png';
 import HarteHanksImage from '../assets/images/HarteHanks.png';
@@ -11,35 +12,52 @@ const Experience = () => {
 
   const experiences = [
     {
-      company: "Code the Dream",
-      role: "Practicum Backend Developer",
-      date: "Jul 2024 – Sept 2024",
+      company: "SAS Institute",
+      role: "Software Developer Apprentice",
+      date: "Jan 2025 – Present • Work Experience Trainee",
       description: [
-        "Built and integrated backend features using Node.js and Firebase, ensuring real-time data management and secure user authentication.",
-        "Utilized GitHub for version control and team collaboration, conducting code reviews and ensuring smooth integration.",
-        "Successfully delivered a Minimum Viable Product (MVP), focusing on user-friendly functionality."
+        "Resolved critical bug tickets and improved UI accessibility by collaborating with engineers and UX professionals, implementing unit tests for all bug fixes.",
+        "Achieved 80% end-to-end test coverage per component using Jest and Playwright, improving application reliability.",
+        "Developed automated UI test frameworks with Pytest and Python for Risk Cirrus, preventing critical bugs before production.",
+        "Built feature pages for Risk Engine using Risk Cirrus Builder, integrating RESTful APIs and interactive UI components."
+      ],
+      image: SASImage,
+      url: "https://www.sas.com"
+    },
+    {
+      company: "Code the Dream",
+      role: "Software Developer, CTD Labs",
+      date: "Dec 2024 – Present • Apprenticeship",
+      description: [
+        "Contributed to projects that simplified access to public benefits using Next.js, TypeScript, React, LangChain, and OpenAI.",
+        "Built user-facing components and AI-driven features to enhance user engagement.",
+        "Contributed to Next.js applications with multilingual support and PWA capabilities using Tailwind CSS, next-intl, Airtable, and next-pwa.",
+        "Collaborated using GitHub and agile/scrum methodologies, participating in daily standups, sprint planning, and code reviews."
       ],
       image: CodeTheDreamImage,
       url: "https://www.codethedream.org"
     },
     {
       company: "Appen",
-      role: "Social Media Specialist",
-      date: "Sep 2018 – Dec 2023",
+      role: "Social Media Evaluator / Data AI Annotation",
+      date: "Sep 2018 – Dec 2023 • Independent Contractor",
       description: [
-        "Content Analysis: Analyzed media sources, including websites and ads, to ensure quality and relevance.",
-        "Skill Development: Developed strong data analysis, problem-solving, and attention to detail, translating into technical roles."
+        "Evaluated social media content to ensure compliance with guidelines, protecting users from misleading information.",
+        "Curated and annotated data to improve AI model performance and training accuracy.",
+        "Analyzed website articles and advertisements for quality and relevance using data-driven processes.",
+        "Provided feedback that improved product releases and user engagement."
       ],
       image: AppenImage,
       url: "https://www.appen.com"
     },
     {
       company: "Reynolds Community College",
-      role: "Social Media Specialist",
-      date: "Sep 2017 – Sep 2018",
+      role: "Media Specialist",
+      date: "Dec 2017 – Jul 2018",
       description: [
-        "Media Management: Managed and adjusted electronic equipment for media presentations and events.",
-        "Collaboration: Collaborated on content creation and troubleshooting technical issues for successful media execution."
+        "Provided technical support for special events, ensuring successful multimedia presentations and video conferencing free from technical issues.",
+        "Troubleshot, maintained, and managed inventory of technology equipment, keeping systems operational and ready for use.",
+        "Responded to technical requests using ticketing system, resolving pending issues and maintaining service quality."
       ],
       image: ReynoldsImage,
       url: "https://www.reynolds.edu"
@@ -49,8 +67,9 @@ const Experience = () => {
       role: "Technical Support Representative",
       date: "Oct 2015 – Dec 2016",
       description: [
-        "Technical Support: Provided troubleshooting and technical support for desktops, laptops, and A/V equipment, ensuring timely resolution of issues.",
-        "Customer Satisfaction: Exceeded customer satisfaction metrics by consistently resolving technical challenges efficiently."
+        "Troubleshot and supported desktops, laptops, printers, tablets, televisions, and cameras, resolving technical issues efficiently.",
+        "Documented customer information and troubleshooting steps using SAP software, maintaining detailed records of support interactions.",
+        "Recognized as Employee of the Month multiple times for highest ratings in action, ownership, customer satisfaction, and resolved tickets."
       ],
       image: HarteHanksImage,
       url: "https://www.hartehanks.com"
