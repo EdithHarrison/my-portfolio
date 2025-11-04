@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/css/Experience.css';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 import SASImage from '../assets/images/SAS.png';
 import AppenImage from '../assets/images/Appen.png';
@@ -80,8 +81,10 @@ const Experience = () => {
     setActiveIndex(0);
   }, []);
 
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section id="experience">
+    <section id="experience" className={`scroll-animate ${isVisible ? 'visible' : ''}`} ref={ref}>
       <h2 className="numbered-heading" data-number="02.">Where I've Worked</h2>
       <div className="experience-content">
         <div className="company-list">

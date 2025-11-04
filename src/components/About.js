@@ -1,9 +1,12 @@
 import React from 'react';
 import '../assets/css/About.css';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const About = () => {
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section id="about" className="about-section">
+    <section id="about" className={`about-section scroll-animate ${isVisible ? 'visible' : ''}`} ref={ref}>
       <h2 className="numbered-heading" data-number="01.">About Me</h2>
       <div className="inner">
         <div className="about-content">
