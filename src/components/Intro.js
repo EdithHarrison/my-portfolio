@@ -3,10 +3,35 @@ import '../assets/css/Intro.css'
 
 const Intro = () => {
   const [mounted, setMounted] = useState(false);
+  const [poppedBubbles, setPoppedBubbles] = useState(new Set());
+  const [reappearingBubbles, setReappearingBubbles] = useState(new Set());
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const handleBubbleClick = (index) => {
+    if (!poppedBubbles.has(index)) {
+      setPoppedBubbles(prev => new Set([...prev, index]));
+      // Reappear after 3 seconds (after pop animation completes)
+      setTimeout(() => {
+        setReappearingBubbles(prev => new Set([...prev, index]));
+        setPoppedBubbles(prev => {
+          const newSet = new Set(prev);
+          newSet.delete(index);
+          return newSet;
+        });
+        // Remove reappearing class after animation completes
+        setTimeout(() => {
+          setReappearingBubbles(prev => {
+            const newSet = new Set(prev);
+            newSet.delete(index);
+            return newSet;
+          });
+        }, 1500);
+      }, 3000);
+    }
+  };
 
   const AnimatedText = ({ text, delay = 0, className = '' }) => {
     const [displayedText, setDisplayedText] = useState('');
@@ -83,9 +108,21 @@ const Intro = () => {
           </a>
         </div>
         <div className="intro-decoration">
-          <div className="decoration-circle"></div>
-          <div className="decoration-circle"></div>
-          <div className="decoration-circle"></div>
+          <div 
+            className={`decoration-circle ${poppedBubbles.has(0) ? 'popped' : ''} ${reappearingBubbles.has(0) ? 'reappearing' : ''}`}
+            onClick={() => handleBubbleClick(0)}
+            style={{ cursor: 'pointer' }}
+          ></div>
+          <div 
+            className={`decoration-circle ${poppedBubbles.has(1) ? 'popped' : ''} ${reappearingBubbles.has(1) ? 'reappearing' : ''}`}
+            onClick={() => handleBubbleClick(1)}
+            style={{ cursor: 'pointer' }}
+          ></div>
+          <div 
+            className={`decoration-circle ${poppedBubbles.has(2) ? 'popped' : ''} ${reappearingBubbles.has(2) ? 'reappearing' : ''}`}
+            onClick={() => handleBubbleClick(2)}
+            style={{ cursor: 'pointer' }}
+          ></div>
         </div>
       </div>
     </section>
