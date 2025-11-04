@@ -14,14 +14,6 @@
 
 .project-card {
   width: 100%;
-  opacity: 1;
-  transform: translateX(0) scale(1);
-  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.projects-container.transitioning .project-card {
-  opacity: 0;
-  transform: translateX(30px) scale(0.96);
 }
 
 .project-inner {

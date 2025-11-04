@@ -130,6 +130,21 @@
   opacity: 0.3;
   animation: float 6s ease-in-out infinite;
   position: relative;
+  transition: transform 0.2s ease, opacity 1.5s ease-in-out;
+}
+
+.decoration-circle:hover:not(.popped) {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+.decoration-circle.popped {
+  animation: pop 0.5s ease-out forwards !important;
+  pointer-events: none;
+}
+
+.decoration-circle.reappearing {
+  animation: fadeIn 1.5s ease-in-out forwards, float 6s ease-in-out infinite 1.5s;
 }
 
 .decoration-circle:nth-child(1) {
@@ -161,6 +176,32 @@
   }
   66% {
     transform: translateY(10px) rotate(-5deg);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1) translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.5) translateY(-10px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2) translateY(-20px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
   }
 }
 

@@ -90,28 +90,17 @@ const Projects = () => {
   ];
 
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const nextProject = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentProjectIndex((prevIndex) => 
-        prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-      );
-      setIsTransitioning(false);
-    }, 300);
+    setCurrentProjectIndex((prevIndex) => 
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const prevProject = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentProjectIndex((prevIndex) => 
-        prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-      );
-      setIsTransitioning(false);
-    }, 300);
+    setCurrentProjectIndex((prevIndex) => 
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
   };
 
   const ProjectCard = ({ project, index }) => {
@@ -204,20 +193,18 @@ const Projects = () => {
           className="project-nav-button prev" 
           onClick={prevProject}
           aria-label="Previous project"
-          disabled={isTransitioning}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
         </button>
-        <div className={`projects-container ${isTransitioning ? 'transitioning' : ''}`}>
+        <div className="projects-container">
           <ProjectCard project={projects[currentProjectIndex]} index={currentProjectIndex} />
         </div>
         <button 
           className="project-nav-button next" 
           onClick={nextProject}
           aria-label="Next project"
-          disabled={isTransitioning}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="9 18 15 12 9 6"></polyline>
@@ -229,13 +216,7 @@ const Projects = () => {
               key={index}
               className={`indicator ${index === currentProjectIndex ? 'active' : ''}`}
               onClick={() => {
-                if (!isTransitioning) {
-                  setIsTransitioning(true);
-                  setTimeout(() => {
-                    setCurrentProjectIndex(index);
-                    setIsTransitioning(false);
-                  }, 300);
-                }
+                setCurrentProjectIndex(index);
               }}
               aria-label={`Go to project ${index + 1}`}
             />
